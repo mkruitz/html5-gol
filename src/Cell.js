@@ -5,9 +5,9 @@ AliveCell = function() {
     var isOverPopulated = function(aliveNeighbours)  { return aliveNeighbours > 3; };
 
     this.nextState = function(aliveNeighbours) {
-        if(isUnderPopulated(aliveNeighbours) || isOverPopulated(aliveNeighbours))
-            return new DeadCell();
-        return self;
+        return isUnderPopulated(aliveNeighbours) || isOverPopulated(aliveNeighbours)
+            ? new DeadCell()
+            : self;
     };
 };
 
@@ -17,8 +17,8 @@ DeadCell = function() {
     var canBeBorn = function(aliveNeighbours) { return aliveNeighbours === 3; };
 
     this.nextState = function(aliveNeighbours) {
-        if(canBeBorn(aliveNeighbours))
-            return new AliveCell();
-        return self;
+        return canBeBorn(aliveNeighbours)
+            ? new AliveCell()
+            : self;
     };
 };
