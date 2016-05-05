@@ -19,7 +19,7 @@ describe('GameOfLife', function() {
         it('has no neighbours dies', function () {
             var newCell = game.nextState(aliveCell, []);
 
-            assertCellIsDead(newCell)
+            assertCellIsDead(newCell);
         });
 
         it('has one alive and one dead neighbours it dies', function () {
