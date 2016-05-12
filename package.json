@@ -10,13 +10,13 @@
     "test": "tests"
   },
   "dependencies": {
-    "chai": "^3.5.0"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
     "mocha": "^2.4.5"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --recursive tests"
   },
   "repository": {
     "type": "git",
