@@ -7,6 +7,7 @@
     "node": "4.4.2"
   },
   "directories": {
+    "lib": "src",
     "test": "tests"
   },
   "dependencies": {
@@ -16,7 +17,7 @@
     "mocha": "^2.4.5"
   },
   "scripts": {
-    "test": "mocha --recursive tests"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
