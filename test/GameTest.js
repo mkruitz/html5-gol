@@ -1,6 +1,6 @@
 var assert = require('chai').assert;
-require('../src/Cell.js');
-require('../src/Game.js');
+require('./../src/Cell.js');
+require('./../src/Game.js');
 
 describe('GameOfLife', function() {
     var game = new Game();

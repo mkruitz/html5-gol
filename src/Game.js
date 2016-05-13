@@ -1,3 +1,5 @@
+require('./Cell.js');
+
 Game = function() {
     var countAliveNeighbours = function(neighbours) {
         var liveCells = 0;
