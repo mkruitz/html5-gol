@@ -29,7 +29,7 @@ NeighbourGetter = function(population) {
             : NO_NEIGHBOUR;
     };
     var push = function(results, dimension, coord) {
-        if(coord != NO_NEIGHBOUR) {
+        if(coord !== NO_NEIGHBOUR) {
             results.push(dimension[coord]);
         }
     };
