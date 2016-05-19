@@ -62,4 +62,27 @@ describe('Board to neighbour list', function() {
             assert.deepEqual([1,3], getter.getNeighboursFor(1));
         });
     });
+
+    describe('Two dimension', function () {
+        it('returns empty list of neighbours for a single cell', function () {
+            var getter = new NeighbourGetter(
+                [
+                    [1]
+                ]
+            );
+
+            assert.deepEqual([], getter.getNeighboursFor(0, 0));
+        });
+
+        it('returns right neighbour', function () {
+            var getter = new NeighbourGetter(
+                [
+                    [1, 2]
+                ]
+            );
+
+            assert.deepEqual([2], getter.getNeighboursFor(0, 0));
+            assert.deepEqual([2], getter.getNeighboursFor(0, 0));
+        });
+    });
 });

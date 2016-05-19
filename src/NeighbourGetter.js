@@ -1,12 +1,18 @@
 NeighbourGetter = function(population) {
     const NO_NEIGHBOUR = -1;
-    
-    this.getNeighboursFor = function(x) {
+
+    this.getNeighboursFor = function(x, y) {
         var results = [];
-        if (typeof x !== 'undefined') {
-            push(results, leftNeighbour(x));
-            push(results, rightNeighbour(x));
+        var dimension = population;
+
+        if (typeof y !== 'undefined') {
+            dimension = dimension[0];
         }
+        if (typeof x !== 'undefined') {
+            push(results, dimension, leftNeighbour(x));
+            push(results, dimension, rightNeighbour(x, dimension));
+        }
+
         return results;
     };
 
@@ -16,15 +22,15 @@ NeighbourGetter = function(population) {
             ? left
             : NO_NEIGHBOUR;
     };
-    var rightNeighbour = function(x) {
+    var rightNeighbour = function(x, dimension) {
         var right = x+1;
-        return population.length > right
+        return dimension.length > right
             ? right
             : NO_NEIGHBOUR;
     };
-    var push = function(results, coord) {
+    var push = function(results, dimension, coord) {
         if(coord != NO_NEIGHBOUR) {
-            results.push(population[coord]);
+            results.push(dimension[coord]);
         }
     };
 };
