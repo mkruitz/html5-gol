@@ -1,3 +1,8 @@
 language: node_js
 node_js:
   - "4"
+script:
+  npm run coverage
+addons:
+    code_climate:
+        repo_token: 8b9640c57d322ea4916364d01be51d8df05fe5f44cf276fa32fe4cb1b45a9db0
