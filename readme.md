@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/mkruitz/html5-gol.svg?branch=master)](https://travis-ci.org/mkruitz/html5-gol)
+[![Build Status](https://travis-ci.org/mkruitz/html5-gol.svg?branch=master)](https://travis-ci.org/mkruitz/html5-gol) [![Test Coverage](https://codeclimate.com/github/mkruitz/html5-gol/badges/coverage.svg)](https://codeclimate.com/github/mkruitz/html5-gol/coverage)
 # Conway's Game of Life
 
 #####Goals
