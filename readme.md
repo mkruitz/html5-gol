@@ -1,4 +1,5 @@
-#Conway's Game of Life
+[![Build Status](https://travis-ci.org/mkruitz/html5-gol.svg?branch=master)](https://travis-ci.org/mkruitz/html5-gol)
+# Conway's Game of Life
 
 #####Goals
 1. Run tests
