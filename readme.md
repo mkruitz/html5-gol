@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/mkruitz/html5-gol.svg?branch=master)](https://travis-ci.org/mkruitz/html5-gol) [![Test Coverage](https://codeclimate.com/github/mkruitz/html5-gol/badges/coverage.svg)](https://codeclimate.com/github/mkruitz/html5-gol/coverage)
+[![Build Status](https://travis-ci.org/mkruitz/html5-gol.svg?branch=master)](https://travis-ci.org/mkruitz/html5-gol) [![bitHound Code](https://www.bithound.io/github/mkruitz/html5-gol/badges/code.svg)](https://www.bithound.io/github/mkruitz/html5-gol) [![bitHound Overall Score](https://www.bithound.io/github/mkruitz/html5-gol/badges/score.svg)](https://www.bithound.io/github/mkruitz/html5-gol)
 # Conway's Game of Life
 
 #####Goals
