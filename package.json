@@ -19,7 +19,7 @@
     "mocha": "^2.4.5"
   },
   "scripts": {
-    "test": "mocha -w",
+    "test": "mocha",
     "coveralls": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "lint": "eslint ."
   },
