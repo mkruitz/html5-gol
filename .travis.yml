@@ -4,4 +4,4 @@ node_js:
 script:
   npm run coverage
 after_script:
-  - codeclimate-test-reporter < coverage/lcov.info
+  - npm run update-metrics
