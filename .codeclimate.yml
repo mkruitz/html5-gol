@@ -1,7 +1,5 @@
 ---
 engines:
-  rubocop:
-    enabled: true
   duplication:
     enabled: true
     config:
@@ -9,6 +7,9 @@ engines:
       - javascript
   eslint:
     enabled: true
+    checks:
+      complexity:
+        enabled: true
   fixme:
     enabled: true
 ratings:
