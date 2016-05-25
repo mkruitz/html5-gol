@@ -6,7 +6,12 @@
    - ~~Create test with Karma / Chai~~
    - ~~Implement GOL rules~~
    - Create board serializer for testing board rules -> starting
-2. Learn React
+2. Build toolchain
+   - [x] Buildserver / running tests
+   - [x] Add badges to show status on:
+     - [x] code coverage
+     - [x] code quality (using a linter)
+3. Learn React
    - Create components to display (in browser)
    - Testing React logic
    - Testing graphics
