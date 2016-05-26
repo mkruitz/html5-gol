@@ -6,13 +6,14 @@ NeighbourGetter = function(population) {
         if (typeof y !== 'undefined') {
             dimension = dimension[0];
 
-            var top = y-1;
+            var top    = y-1;
+            var bottom = y+1;
 
             if(0 <= top) {
-                return [population[top][0]];
+                results.push(population[top][0]);
             }
-            if(population.length > y+1) {
-                return [population[1][0]];
+            if(population.length > bottom) {
+                results.push(population[bottom][0]);
             }
         }
         if (typeof x !== 'undefined') {
