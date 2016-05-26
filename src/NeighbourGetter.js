@@ -9,7 +9,7 @@ NeighbourGetter = function(population) {
             var top = y-1;
 
             if(0 <= top) {
-                results.push(population[top][0]);
+                return [population[top][0]];
             }
         }
         if (typeof x !== 'undefined') {
