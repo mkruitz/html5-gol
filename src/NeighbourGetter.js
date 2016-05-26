@@ -6,7 +6,7 @@ NeighbourGetter = function(population) {
             dimension = dimension[0];
         }
         if (typeof x !== 'undefined') {
-            if(x > 0) {
+            if(0 <= x-1) {
                 results.push(dimension[x-1]);
             }
             if(dimension.length > x+1) {
