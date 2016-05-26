@@ -103,7 +103,7 @@ describe('Board to neighbour list', function() {
         // Having two options for moving forward
         // 2. Smallest step in test
         // -> but will it be the smallest change in production code?
-        xit('returns top neighbour', function () {
+        it('returns top neighbour', function () {
             var getter = new NeighbourGetter(
                 [
                     [1],
