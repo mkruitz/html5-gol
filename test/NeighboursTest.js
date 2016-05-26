@@ -74,7 +74,7 @@ describe('Board to neighbour list', function() {
             assert.deepEqual([], getter.getNeighboursFor(0, 0));
         });
 
-        it('returns right neighbour', function () {
+        it('returns right neighbour of the top row', function () {
             var getter = new NeighbourGetter(
                 [
                     [1, 2]
@@ -84,5 +84,50 @@ describe('Board to neighbour list', function() {
             assert.deepEqual([2], getter.getNeighboursFor(0, 0));
             assert.deepEqual([2], getter.getNeighboursFor(0, 0));
         });
+
+        // Having two options for moving forward
+        // 1. Creating larger test which at first creates partial functionality
+        // -> but could be a smaller change in production code?
+        xit('returns right neighbour of the bottom row', function () {
+            var getter = new NeighbourGetter(
+                [
+                    [1,2],
+                    [3,4]
+                ]
+            );
+
+            assert.deepEqual([4], getter.getNeighboursFor(0, 1));
+            // assert.deepEqual([1,3,4], getter.getNeighboursFor(0, 1));
+        });
+
+        // Having two options for moving forward
+        // 2. Smallest step in test
+        // -> but will it be the smallest change in production code?
+        xit('returns bottom neighbour', function () {
+            var getter = new NeighbourGetter(
+                [
+                    [1],
+                    [2]
+                ]
+            );
+
+            assert.deepEqual([2], getter.getNeighboursFor(0, 0));
+        });
+
+        xit('returns top neighbour', function () {
+            var getter = new NeighbourGetter(
+                [
+                    [1],
+                    [2]
+                ]
+            );
+
+            assert.deepEqual([1], getter.getNeighboursFor(0, 1));
+        });
+
+
+
     });
+
+
 });
