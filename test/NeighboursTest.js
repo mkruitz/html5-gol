@@ -136,5 +136,17 @@ describe('Board to neighbour list', function() {
 
             assert.deepEqual([2], getter.getNeighboursFor(0, 0));
         });
+
+        it('returns bottom neighbour', function () {
+            var getter = new NeighbourGetter(
+                [
+                    [1],
+                    [2],
+                    [3]
+                ]
+            );
+
+            assert.deepEqual([2], getter.getNeighboursFor(0, 0));
+        });
     });
 });
