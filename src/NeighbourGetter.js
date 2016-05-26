@@ -11,6 +11,9 @@ NeighbourGetter = function(population) {
             if(0 <= top) {
                 return [population[top][0]];
             }
+            if(population.length === 2) {
+                return [population[1][0]];
+            }
         }
         if (typeof x !== 'undefined') {
             var left = x-1;

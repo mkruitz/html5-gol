@@ -126,7 +126,7 @@ describe('Board to neighbour list', function() {
             assert.deepEqual([2], getter.getNeighboursFor(0, 2));
         });
 
-        xit('returns bottom neighbour', function () {
+        it('returns bottom neighbour', function () {
             var getter = new NeighbourGetter(
                 [
                     [1],
