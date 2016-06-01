@@ -161,5 +161,51 @@ describe('Board to neighbour list', function() {
 
             assert.deepEqual([1,3], getter.getNeighboursFor(0, 1));
         });
+
+        it('returns left and right neighbours 1x3', function () {
+            var getter = new NeighbourGetter(
+                [
+                    [1, 2, 3]
+                ]
+            );
+
+            assert.deepEqual([1,3], getter.getNeighboursFor(1, 0));
+        });
+
+        xit('returns left, right and bottom-row neighbours 2x3', function () {
+            var getter = new NeighbourGetter(
+                [
+                    [1, 2, 3],
+                    [4, 5, 6]
+                ]
+            );
+
+            assert.deepEqual([1,3,4,5,6], getter.getNeighboursFor(1, 0));
+        });
+
+        xit('returns top-row, right and bottom-row neighbours 3x2', function () {
+            var getter = new NeighbourGetter(
+                [
+                    [1, 2],
+                    [3, 4],
+                    [5, 6]
+                ]
+            );
+
+            assert.deepEqual([1,2,4,5,6], getter.getNeighboursFor(1, 0));
+        });
+
+        //Is this test still required?
+        xit('returns top-row, left, right, bottom-row neighbours', function () {
+            var getter = new NeighbourGetter(
+                [
+                    [1, 2, 3],
+                    [4, 5, 6],
+                    [7, 8, 9]
+                ]
+            );
+
+            assert.deepEqual([2,4,6,8], getter.getNeighboursFor(1, 1));
+        });
     });
 });

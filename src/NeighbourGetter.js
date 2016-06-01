@@ -9,6 +9,7 @@ NeighbourGetter = function(population) {
             if(0 <= top) {
                 results.push(population[top][0]);
             }
+            merge(results, getNeighboursOfSingleDimension(population[0], x));
             if(population.length > bottom) {
                 results.push(population[bottom][0]);
             }
@@ -34,4 +35,8 @@ NeighbourGetter = function(population) {
         }
         return results;
     };
+
+    var merge = function(array1, array2) {
+        Array.prototype.push.apply(array1, array2);
+    }
 };
