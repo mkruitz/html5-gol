@@ -7,9 +7,10 @@ NeighbourGetter = function(population) {
             var bottom = y+1;
 
             if(0 <= top) {
+                merge(results, getNeighboursOfSingleDimension(population[top], 0));
                 results.push(population[top][0]);
             }
-            merge(results, getNeighboursOfSingleDimension(population[0], x));
+            merge(results, getNeighboursOfSingleDimension(population[y], x));
             if(population.length > bottom) {
                 results.push(population[bottom][x]);
                 merge(results, getNeighboursOfSingleDimension(population[bottom], x));

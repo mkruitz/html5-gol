@@ -186,7 +186,7 @@ describe('Board to neighbour list', function() {
             assert.deepEqual([1,3,5,4,6], getter.getNeighboursFor(1, 0));
         });
 
-        xit('returns top-row, right and bottom-row neighbours 3x2', function () {
+        it('returns top-row, right and bottom-row neighbours 3x2', function () {
             var getter = new NeighbourGetter(
                 [
                     [1, 2],
@@ -195,10 +195,10 @@ describe('Board to neighbour list', function() {
                 ]
             );
 
-            assert.deepEqual([1,2,4,5,6], getter.getNeighboursFor(1, 0));
+            //1. assert.deepEqual([1,4,5,6], getter.getNeighboursFor(0, 1));
+            assert.deepEqual([2,1,4,5,6], getter.getNeighboursFor(0, 1));
         });
 
-        //Is this test still required?
         xit('returns top-row, left, right, bottom-row neighbours', function () {
             var getter = new NeighbourGetter(
                 [
@@ -208,7 +208,7 @@ describe('Board to neighbour list', function() {
                 ]
             );
 
-            assert.deepEqual([2,4,6,8], getter.getNeighboursFor(1, 1));
+            assert.deepEqual([1,3,2,4,6,8,7,9], getter.getNeighboursFor(1, 1));
         });
     });
 });
