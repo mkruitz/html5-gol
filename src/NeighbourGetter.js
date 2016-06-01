@@ -18,7 +18,7 @@ NeighbourGetter = function(population) {
             return getNeighboursOfSingleDimension(population, x);
         }
         return results;
-    }
+    };
 
     var getNeighboursOfSingleDimension = function(population, x) {
         var results = [];
