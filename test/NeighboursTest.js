@@ -180,7 +180,10 @@ describe('Board to neighbour list', function() {
                 ]
             );
 
-            assert.deepEqual([1,3,5], getter.getNeighboursFor(1, 0));
+            // Step 1.
+            // assert.deepEqual([1,3,5], getter.getNeighboursFor(1, 0));
+            // Step 2.
+            assert.deepEqual([1,3,5,4,6], getter.getNeighboursFor(1, 0));
         });
 
         xit('returns top-row, right and bottom-row neighbours 3x2', function () {
