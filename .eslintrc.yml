@@ -19,8 +19,13 @@ ecmaFeatures:
   jsx: false                                # enable JSX
 
 env:
+  es6: true
   node: true
   mocha: true
+
+parserOptions:
+  sourceType: module
+
 extends: 'eslint:recommended'
 
 plugins: [
