@@ -172,7 +172,7 @@ describe('Board to neighbour list', function() {
             assert.deepEqual([1,3], getter.getNeighboursFor(1, 0));
         });
 
-        xit('returns left, right and bottom-row neighbours 2x3', function () {
+        it('returns left, right and bottom-row neighbours 2x3', function () {
             var getter = new NeighbourGetter(
                 [
                     [1, 2, 3],
@@ -180,7 +180,7 @@ describe('Board to neighbour list', function() {
                 ]
             );
 
-            assert.deepEqual([1,3,4,5,6], getter.getNeighboursFor(1, 0));
+            assert.deepEqual([1,3,5], getter.getNeighboursFor(1, 0));
         });
 
         xit('returns top-row, right and bottom-row neighbours 3x2', function () {
