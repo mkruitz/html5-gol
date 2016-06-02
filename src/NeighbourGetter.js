@@ -41,9 +41,9 @@ export default class NeighbourGetter {
             results.push(population[right]);
         }
         return results;
-    };
+    }
 
     merge(array1, array2) {
         Array.prototype.push.apply(array1, array2);
     }
-};
+}
