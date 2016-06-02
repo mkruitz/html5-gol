@@ -1,18 +1,18 @@
-require('./Cell.js');
+import { AliveCell } from './Cell.js';
 
-Game = function() {
-    var countAliveNeighbours = function(neighbours) {
+export default class Game {
+    countAliveNeighbours(neighbours) {
         var liveCells = 0;
         for (var i = 0; i < neighbours.length; i++) {
             if(neighbours[i] instanceof AliveCell)
                 liveCells++;
         }
         return liveCells;
-    };
+    }
 
-    this.nextState = function(self, neighbours) {
-        var liveCells = countAliveNeighbours(neighbours);
+    nextState(self, neighbours) {
+        var liveCells = this.countAliveNeighbours(neighbours);
 
         return self.nextState(liveCells);
-    };
-};
+    }
+}

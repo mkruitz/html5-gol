@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/mkruitz/html5-gol.svg?branch=master)](https://travis-ci.org/mkruitz/html5-gol) [![Test Coverage](https://codeclimate.com/github/mkruitz/html5-gol/badges/coverage.svg)](https://codeclimate.com/github/mkruitz/html5-gol/coverage)
+[![Build Status](https://travis-ci.org/mkruitz/html5-gol.svg?branch=master)](https://travis-ci.org/mkruitz/html5-gol) [![Coverage Status](https://coveralls.io/repos/github/mkruitz/html5-gol/badge.svg?branch=master)](https://coveralls.io/github/mkruitz/html5-gol?branch=master) [![bitHound Code](https://www.bithound.io/github/mkruitz/html5-gol/badges/code.svg)](https://www.bithound.io/github/mkruitz/html5-gol) [![bitHound Overall Score](https://www.bithound.io/github/mkruitz/html5-gol/badges/score.svg)](https://www.bithound.io/github/mkruitz/html5-gol)
 # Conway's Game of Life
 
 #####Goals
@@ -6,7 +6,12 @@
    - ~~Create test with Karma / Chai~~
    - ~~Implement GOL rules~~
    - Create board serializer for testing board rules -> starting
-2. Learn React
+2. Build toolchain
+   - [x] Buildserver / running tests
+   - [x] Add badges to show status on:
+     - [x] code coverage
+     - [x] code quality (using a linter)
+3. Learn React
    - Create components to display (in browser)
    - Testing React logic
    - Testing graphics
