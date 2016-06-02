@@ -3,15 +3,26 @@
 
 #####Goals
 1. Run tests
-   - ~~Create test with Karma / Chai~~
-   - ~~Implement GOL rules~~
-   - Create board serializer for testing board rules -> starting
+   - [x] Create test with Karma / Chai
+   - [x] Implement GOL rules
+   - [ ] Implement neighbour getter rules
+     - [x] Zero dimensions
+     - [x] One dimension
+     - [x] Two dimensions
+     - [ ] Multiple dimensions
 2. Build toolchain
-   - [x] Buildserver / running tests
-   - [x] Add badges to show status on:
-     - [x] code coverage
-     - [x] code quality (using a linter)
-3. Learn React
-   - Create components to display (in browser)
-   - Testing React logic
-   - Testing graphics
+   - [x] Buildserver
+     - [x] Run tests automatic
+     - [x] Run code quality metrics (using a linter)
+     - [ ] Code coverage
+   - [ ] Continuous integration
+     - [ ] deploy output
+3. GUI ( React )
+   - [ ] Support domain model 
+     - [ ] Zero dimensions
+     - [ ] One dimension
+     - [ ] Two dimensions
+     - [ ] Three dimensions
+     - [ ] Apply GOL and run automatic
+   - [ ] Test logic
+   - [ ] Test graphics
