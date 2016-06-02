@@ -1,41 +1,49 @@
 export default class NeighbourGetter {
     constructor(newPopulation) {
         this.population = newPopulation;
-
-        this.NO_NEIGHBOUR = -1;
     }
 
 
     getNeighboursFor(x, y) {
         var results = [];
-        var dimension = this.population;
 
         if (typeof y !== 'undefined') {
-            dimension = dimension[0];
+            var top    = y-1;
+            var bottom = y+1;
+
+            if(0 <= top) {
+                this.merge(results, this.getNeighboursOfSingleDimension(this.population[top], x));
+                results.push(this.population[top][x]);
+            }
+            this.merge(results, this.getNeighboursOfSingleDimension(this.population[y], x));
+            if(this.population.length > bottom) {
+                results.push(this.population[bottom][x]);
+                this.merge(results, this.getNeighboursOfSingleDimension(this.population[bottom], x));
+            }
+            return results;
         }
         if (typeof x !== 'undefined') {
-            this.push(results, dimension, this.leftNeighbour(x));
-            this.push(results, dimension, this.rightNeighbour(x, dimension));
+            return this.getNeighboursOfSingleDimension(this.population, x);
         }
-
         return results;
     }
 
-    leftNeighbour(x) {
+    getNeighboursOfSingleDimension(population, x) {
+        var results = [];
+
         var left = x-1;
-        return left >= 0
-            ? left
-            : this.NO_NEIGHBOUR;
-    }
-    rightNeighbour(x, dimension) {
         var right = x+1;
-        return dimension.length > right
-            ? right
-            : this.NO_NEIGHBOUR;
-    }
-    push(results, dimension, coord) {
-        if(coord !== this.NO_NEIGHBOUR) {
-            results.push(dimension[coord]);
+
+        if(0 <= left) {
+            results.push(population[left]);
         }
+        if(population.length > right) {
+            results.push(population[right]);
+        }
+        return results;
+    };
+
+    merge(array1, array2) {
+        Array.prototype.push.apply(array1, array2);
     }
-}
+};
