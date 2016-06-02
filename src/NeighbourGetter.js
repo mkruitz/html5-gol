@@ -1,5 +1,10 @@
-NeighbourGetter = function(population) {
-    this.getNeighboursFor = function(x, y) {
+export default class NeighbourGetter {
+    constructor(newPopulation) {
+        this.population = newPopulation;
+    }
+
+
+    getNeighboursFor(x, y) {
         var results = [];
 
         if (typeof y !== 'undefined') {
@@ -7,23 +12,23 @@ NeighbourGetter = function(population) {
             var bottom = y+1;
 
             if(0 <= top) {
-                merge(results, getNeighboursOfSingleDimension(population[top], x));
-                results.push(population[top][x]);
+                this.merge(results, this.getNeighboursOfSingleDimension(this.population[top], x));
+                results.push(this.population[top][x]);
             }
-            merge(results, getNeighboursOfSingleDimension(population[y], x));
-            if(population.length > bottom) {
-                results.push(population[bottom][x]);
-                merge(results, getNeighboursOfSingleDimension(population[bottom], x));
+            this.merge(results, this.getNeighboursOfSingleDimension(this.population[y], x));
+            if(this.population.length > bottom) {
+                results.push(this.population[bottom][x]);
+                this.merge(results, this.getNeighboursOfSingleDimension(this.population[bottom], x));
             }
             return results;
         }
         if (typeof x !== 'undefined') {
-            return getNeighboursOfSingleDimension(population, x);
+            return this.getNeighboursOfSingleDimension(this.population, x);
         }
         return results;
-    };
+    }
 
-    var getNeighboursOfSingleDimension = function(population, x) {
+    getNeighboursOfSingleDimension(population, x) {
         var results = [];
 
         var left = x-1;
@@ -38,7 +43,7 @@ NeighbourGetter = function(population) {
         return results;
     };
 
-    var merge = function(array1, array2) {
+    merge(array1, array2) {
         Array.prototype.push.apply(array1, array2);
     }
 };

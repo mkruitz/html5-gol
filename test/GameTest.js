@@ -1,6 +1,7 @@
-var assert = require('chai').assert;
-require('./../src/Cell.js');
-require('./../src/Game.js');
+import { AliveCell, DeadCell } from './../src/Cell.js';
+import Game from './../src/Game.js';
+
+var { assert } = require('chai');
 
 describe('GameOfLife', function() {
     var game = new Game();

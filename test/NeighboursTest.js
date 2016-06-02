@@ -1,5 +1,6 @@
+import NeighbourGetter from '../src/NeighbourGetter.js';
+
 var assert = require('chai').assert;
-require('../src/NeighbourGetter.js');
 
 describe('Board to neighbour list', function() {
     describe('No dimension', function () {
