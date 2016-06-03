@@ -24,7 +24,7 @@
   "scripts": {
     "test": "mocha --compilers js:babel-core/register",
     "test-with-watch": "mocha --compilers js:babel-core/register -w",
-    "coveralls": "istanbul cover node_modules/mocha/bin/_mocha --compilers js:babel/register --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "coveralls": "istanbul cover node_modules/mocha/bin/_mocha -- --compilers js:babel-core/register --report lcovonly -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "lint": "eslint ."
   },
   "repository": {
