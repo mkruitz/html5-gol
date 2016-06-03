@@ -11,7 +11,7 @@
      - [x] Two dimensions
      - [ ] Multiple dimensions
 2. Build toolchain
-   - [x] Buildserver
+   - [x] Build server
      - [x] Run tests automatic
      - [x] Run code quality metrics (using a linter)
      - [ ] Code coverage
