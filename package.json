@@ -26,6 +26,7 @@
     "test": "mocha --compilers js:babel-register",
     "test-with-watch": "mocha --compilers js:babel-register -w",
     "coveralls": "istanbul cover node_modules/mocha/bin/_mocha --compilers js:babel-register -- --report lcovonly -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "cc": "istanbul cover _mocha -- --compilers js:babel-register",
     "lint": "eslint ."
   },
   "repository": {
