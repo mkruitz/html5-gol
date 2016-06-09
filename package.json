@@ -22,7 +22,7 @@
   "scripts": {
     "test": "mocha --compilers js:babel/register",
     "create-coverage": "istanbul cover node_modules/mocha/bin/_mocha -- --compilers js:babel/register",
-    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "coveralls": "./node_modules/coveralls/bin/coveralls.js < ./coverage/lcov.info",
     "lint": "eslint ."
   },
   "repository": {
