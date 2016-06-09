@@ -14,7 +14,7 @@
    - [x] Build server
      - [x] Run tests automatic
      - [x] Run code quality metrics (using a linter)
-     - [ ] Code coverage
+     - [x] Code coverage
    - [ ] Continuous integration
      - [ ] deploy output
 3. GUI ( React )
