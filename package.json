@@ -10,7 +10,9 @@
     "lib": "src",
     "test": "tests"
   },
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.13.4"
+  },
   "devDependencies": {
     "babel": "^5.8.19",
     "chai": "^3.5.0",
