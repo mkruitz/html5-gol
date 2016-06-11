@@ -15,8 +15,8 @@
      - [x] Run tests automatic
      - [x] Run code quality metrics (using a linter)
      - [x] Code coverage
-   - [ ] Continuous integration
-     - [ ] deploy output
+   - [x] Continuous integration
+     - [x] deploy output ( http://mkruitz-gol.herokuapp.com/ )
 3. GUI ( React )
    - [ ] Support domain model 
      - [ ] Zero dimensions
